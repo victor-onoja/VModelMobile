@@ -1,0 +1,64 @@
+name: VModel Workflow
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  # push:
+  #   branches: [dev]
+
+  pull_request:
+    branches: [dev]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  generate-apk:
+    name: 'Generate & Upload APK'
+    runs-on: macos-latest
+    env:
+      JAVA_VERSION: "11.0"
+      FLUTTER_VERSION: "3.3.4"
+    steps: 
+      - uses: actions/checkout@v3
+        
+      - uses: subosito/flutter-action@v2.7.1
+        with:
+          cache: true
+          flutter-version: "3.3.4"
+          channel: 'stable'
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install AppDMG
+        run: npm install -g appdmg
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: 11
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Build APK
+        run: flutter build apk --release
+       
+      - name: Build MacOS App
+        run: flutter build macos --release
+      
+      - name: Build DMG
+        run: appdmg installer/dmg_creator/config.json installer/dmg_creator/installer.dmg
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+
+      - name: Upload DMG
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-dmg
+          path: installer/dmg_creator/vmodel.dmg

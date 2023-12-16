@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "fvm flutter pub run flutter_launcher_icons:main -f flutter_launcher_icon.yaml",
+			"label": "app icon",
+			"problemMatcher": []
+		},
+        {
+			"type": "shell",
+			"command": "npx appdmg ./config.json ./vmodel.dmg",
+			"label": "create dmg- move to installer/dmg_creator first",
+			"problemMatcher": []
+		}
+	],
+}

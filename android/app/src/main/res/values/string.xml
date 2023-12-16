@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="app_name">VModel</string>
+<string name="facebook_app_id">212582508136541</string>
+<string name="fb_login_protocol_scheme">fb1234</string>
+<string name="facebook_client_token">f58e378756b60e541fe35410fdf3cbfa</string>
+</resources>

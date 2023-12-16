@@ -1,0 +1,80 @@
+# Exclude mention test
+lib/src/features/create_posts/views/lib/
+
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.buildlog/
+.history
+.svn/
+migrate_working_dir/
+.flutter_export_environment
+
+#flutter version management
+.fvm/
+.fvm
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+linux/flutter/ephemeral/.plugin_symlinks/desktop_window
+
+# Web related
+lib/generated_plugin_registrant.dart
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+macos/Podfile.lock
+macos/Flutter/ephemeral/flutter_export_environment.sh
+macos/Pods/Local Podspecs/FlutterMacOS.podspec.json
+macos/Pods/Pods.xcodeproj/project.pbxproj
+linux/flutter/ephemeral/.plugin_symlinks/desktop_window
+linux/flutter/ephemeral/.plugin_symlinks
+macos/Pods/Pods.xcodeproj/project.pbxproj
+macos/Flutter/ephemeral/flutter_export_environment.sh
+/macos/Pods/
+macos/Pods/Local Podspecs/FlutterMacOS.podspec.json
+macos/Pods/Pods.xcodeproj/project.pbxproj
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.markdown
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-acknowledgements.plist
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Debug-input-files.xcfilelist
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Debug-output-files.xcfilelist
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Profile-input-files.xcfilelist
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Profile-output-files.xcfilelist
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Release-input-files.xcfilelist
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks-Release-output-files.xcfilelist
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig
+macos/Pods/Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig
+macos/Runner.xcodeproj/project.pbxproj

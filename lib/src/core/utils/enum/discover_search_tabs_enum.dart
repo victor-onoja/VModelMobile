@@ -1,0 +1,1 @@
+enum DiscoverSearchTab { members, hashtags }
